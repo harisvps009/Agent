@@ -16,7 +16,6 @@
         </div>
         <div>
             Real-time Business Analytics!
-Welcome
         </div>
     </div>
     <div class="default-realtimeanalytics-descirption">
