@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Content/Custom%20UI/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+    <link href="Content/site.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/Jquery%201.9.1/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="Scripts/Jquery%201.9.1/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>
+    <script src="Scripts/Agent/UI.js" type="text/javascript"></script>
+    <script src="Scripts/HighCharts/highcharts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var table = $("#header table");
+            Agent.HighlightTab(1);
+            table.click(function (e) {
+                table.find(".tabHover").removeClass("tabHover");
+                var target = $(e.target);
+                if (target.hasClass("analytics")) {
+                    Agent.Host.openUrl(Agent.Host.getHostUrl() + "/" + "Charts.aspx");
+                }
+                else if (target.hasClass("Home")) {
+                    Agent.Host.openUrl(Agent.Host.getHostUrl() + "/" + "Default.aspx");
+                }
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="header" class="ui-widget-header app-header-menu-bar app-no-textselect">
+        <table>
+            <tr>
+                <td class="Home">Home</td>
+                <td class="analytics">Analytics</td>
+                <td>About</td>
+                <td>Contact</td>
+            </tr>
+        </table>
+    </div>
+    <div id="test" class="pageContent">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="footer" class="ui-widget-header app-header-menu-bar app-no-textselect"></div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+D:\Web Development\Agent\WebApplication1\bin\WebApplication1.dll
+D:\Web Development\Agent\WebApplication1\bin\WebApplication1.pdb
+D:\Web Development\Agent\WebApplication1\obj\Debug\Agent.csprojResolveAssemblyReference.cache
+D:\Web Development\Agent\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Web Development\Agent\WebApplication1\obj\Debug\WebApplication1.pdb
